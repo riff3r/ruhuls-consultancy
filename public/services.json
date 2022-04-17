@@ -1,0 +1,23 @@
+[
+  {
+    "id": 101,
+    "title": "Corporate Events",
+    "description": "Planning an important business meeting with your partners? Impress them with lunch with Home Made Food",
+    "image": "https://show.moxcreative.com/deliciouso/wp-content/uploads/sites/3/2021/10/food-catering-cuisine-culinary-gourmet-buffet-party-concept-e1634790122337.jpg",
+    "price": 99
+  },
+  {
+    "id": 102,
+    "title": "Wedding Reception",
+    "description": "Celebrate your special event in beautiful atmosphere of HomeFoodie. You can select from couple of pre-made menus",
+    "image": "https://show.moxcreative.com/deliciouso/wp-content/uploads/sites/3/2021/10/restaurant-e1634790142183.jpg",
+    "price": 66
+  },
+  {
+    "id": 103,
+    "title": "Social Event",
+    "description": "Weather you are celebrating your birthday, have a family reunion or something else, we'll make it enjoying and memorable.",
+    "image": "https://show.moxcreative.com/deliciouso/wp-content/uploads/sites/3/2021/10/catering-at-a-luxury-event-e1634789640916.jpg",
+    "price": 49
+  }
+]

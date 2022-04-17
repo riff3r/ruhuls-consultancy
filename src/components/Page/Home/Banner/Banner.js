@@ -4,7 +4,7 @@ import "./Banner.css";
 
 const Banner = () => {
   return (
-    <section>
+    <section className="mb-5">
       <div className="banner flex items-center">
         <div className="container mx-auto text-white">
           <div className="">
@@ -16,8 +16,9 @@ const Banner = () => {
             </h2>
 
             <p className="mb-5">
-              Vulputate rutrum tempus eleifend faucibus vehicula taciti potenti
-              facilisis <br /> ante consectetuer vitae nisl
+              Best home made food in the town. Get your desired food according
+              <br />
+              to your requirement.
             </p>
 
             <Button>Discover More</Button>
