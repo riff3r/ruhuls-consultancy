@@ -1,5 +1,8 @@
 import React, { useRef } from "react";
-import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
+import {
+  useSignInWithEmailAndPassword,
+  useSignInWithGoogle,
+} from "react-firebase-hooks/auth";
 import { Link } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import auth from "../../Firebase/Firebase.init";
@@ -8,15 +11,22 @@ const Login = () => {
   const emailRef = useRef("");
   const passwordRef = useRef("");
 
-  const [signInWithEmailAndPassword, user, loading, error] =
+  const [signInWithEmailAndPassword, emaolUser, emailLoading, emailError] =
     useSignInWithEmailAndPassword(auth);
 
-  const handleLogin = (event) => {
+  const [signInWithGoogle, googleUser, googleLoading, googleError] =
+    useSignInWithGoogle(auth);
+
+  const handleEmailLogin = (event) => {
     event.preventDefault();
     const email = emailRef.current.value;
     const password = passwordRef.current.value;
 
     signInWithEmailAndPassword(email, password);
+  };
+
+  const handleGoogleLogin = () => {
+    signInWithGoogle();
   };
 
   return (
@@ -25,7 +35,7 @@ const Login = () => {
         <div className="bg-white px-6 py-8 rounded shadow-lg text-black w-full">
           <h1 className="mb-8 text-3xl text-center">Login</h1>
           <ToastContainer />
-          <form onSubmit={handleLogin}>
+          <form onSubmit={handleEmailLogin}>
             <input
               ref={emailRef}
               type="text"
@@ -47,6 +57,24 @@ const Login = () => {
               className="bg-orange-600 hover:bg-orange-700 w-full text-center py-3 rounded bg-green text-white  focus:outline-none my-1"
             >
               Login
+            </button>
+
+            <button
+              onClick={handleGoogleLogin}
+              type="button"
+              className="bg-orange-600 hover:bg-orange-700 w-full text-center py-3 rounded bg-green text-white  focus:outline-none my-1 flex items-center justify-center gap-5"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                viewBox="0 0 16 16"
+              >
+                <path d="M15.545 6.558a9.42 9.42 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.689 7.689 0 0 1 5.352 2.082l-2.284 2.284A4.347 4.347 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.792 4.792 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.702 3.702 0 0 0 1.599-2.431H8v-3.08h7.545z" />
+              </svg>
+
+              <span>Login With Google</span>
             </button>
 
             <div className="text-grey-dark mt-6">

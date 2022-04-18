@@ -34,11 +34,7 @@ const Header = () => {
                 </Link>
               </Fragment>
             ) : (
-              <Link
-                to="/"
-                onClick={() => signOut(auth)}
-                className="text-white px-5 py-3 font-semibold "
-              >
+              <Link to="/" onClick={() => signOut(auth)}>
                 Logout
               </Link>
             )}
