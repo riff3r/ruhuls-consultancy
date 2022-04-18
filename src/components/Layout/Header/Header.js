@@ -1,7 +1,15 @@
-import React from "react";
+import { signOut } from "firebase/auth";
+import React, { Fragment } from "react";
+import { useAuthState } from "react-firebase-hooks/auth";
 import { Link } from "react-router-dom";
+import auth from "../../Firebase/Firebase.init";
+import Button from "../../UI/Button/Button";
 
 const Header = () => {
+  const [user, loading, error] = useAuthState(auth);
+
+  console.log(user);
+
   return (
     <header className="bg-sky-900 text-white py-4">
       <div className="container mx-auto">
@@ -15,13 +23,25 @@ const Header = () => {
             <Link to="/service">Service</Link>
             <Link to="/blog">Blog</Link>
             <Link to="/about">About</Link>
-            <Link to="/login">Login</Link>
-            <Link
-              className="bg-orange-600 px-5 py-2 font-semibold"
-              to="/signup"
-            >
-              Signup
-            </Link>
+            {!user?.uid ? (
+              <Fragment>
+                <Link to="/login">Login</Link>
+                <Link
+                  className="bg-orange-600 px-5 py-2 font-semibold"
+                  to="/signup"
+                >
+                  Signup
+                </Link>
+              </Fragment>
+            ) : (
+              <Link
+                to="/"
+                onClick={() => signOut(auth)}
+                className="text-white px-5 py-3 font-semibold "
+              >
+                Logout
+              </Link>
+            )}
           </nav>
         </div>
       </div>
