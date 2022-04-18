@@ -37,7 +37,10 @@ const Login = () => {
     if (resetError) {
       toast(resetError?.message);
     }
-  }, [emailUser, googleUser, resetError]);
+    if (emailError) {
+      toast(emailError?.message);
+    }
+  }, [emailUser, googleUser, resetError, emailError]);
 
   let from = location.state?.from?.pathname || "/";
 
