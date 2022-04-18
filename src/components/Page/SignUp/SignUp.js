@@ -1,11 +1,23 @@
 import React, { useRef } from "react";
 import { Link } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import {
+  useCreateUserWithEmailAndPassword,
+  useUpdateProfile,
+} from "react-firebase-hooks/auth";
+import auth from "../../Firebase/Firebase.init";
 
 const SignUp = () => {
   const userNameRef = useRef("");
   const emailRef = useRef("");
   const passwordRef = useRef("");
   const confirmPasswordRef = useRef("");
+
+  const [createUserWithEmailAndPassword, emailUser, emailLoading, emailError] =
+    useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
+
+  const [updateProfile, updating, error] = useUpdateProfile(auth);
 
   const handleSignUp = (event) => {
     event.preventDefault();
@@ -14,7 +26,16 @@ const SignUp = () => {
     const password = passwordRef.current.value;
     const confirmPassword = confirmPasswordRef.current.value;
 
-    console.log(displayName, email, password);
+    if (password !== confirmPassword) {
+      toast("Password Not Matched");
+      return;
+    }
+
+    console.log(displayName, email, password, confirmPassword);
+
+    createUserWithEmailAndPassword(email, password);
+
+    updateProfile({ displayName });
   };
 
   return (
@@ -22,6 +43,7 @@ const SignUp = () => {
       <div className="container max-w-sm mx-auto flex-1 flex flex-col items-center justify-center px-2">
         <div className="bg-white px-6 py-8 rounded shadow-lg text-black w-full">
           <h1 className="mb-8 text-3xl text-center">Sign Up</h1>
+          <ToastContainer />
           <form onSubmit={handleSignUp}>
             <input
               ref={userNameRef}
