@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Button from "../../UI/Button/Button";
 
 const Header = () => {
   return (
@@ -11,7 +10,7 @@ const Header = () => {
             <span className="text-orange-600">H</span>omeFoodie
           </Link>
 
-          <nav className="font-medium flex flex-col md:flex-row lg:flex-row items-center gap-7 ">
+          <nav className="font-medium flex flex-col md:flex-row lg:flex-row items-center gap-7">
             <Link to="/">Home</Link>
             <Link to="/service">Service</Link>
             <Link to="/blog">Blog</Link>
