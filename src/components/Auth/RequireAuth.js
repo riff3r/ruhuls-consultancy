@@ -2,10 +2,15 @@ import React from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { Navigate, useLocation } from "react-router-dom";
 import auth from "../Firebase/Firebase.init";
+import Spinner from "../UI/Spinner/Spinner";
 
 const RequireAuth = ({ children }) => {
   const [user, loading, error] = useAuthState(auth);
   let location = useLocation();
+
+  if (loading) {
+    return <Spinner />;
+  }
 
   if (!user) {
     // Redirect them to the /login page, but save the current location they were
