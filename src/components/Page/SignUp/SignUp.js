@@ -19,7 +19,7 @@ const SignUp = () => {
 
   const [updateProfile, updating, error] = useUpdateProfile(auth);
 
-  const handleSignUp = (event) => {
+  const handleSignUp = async (event) => {
     event.preventDefault();
     const displayName = userNameRef.current.value;
     const email = emailRef.current.value;
@@ -33,9 +33,9 @@ const SignUp = () => {
 
     console.log(displayName, email, password, confirmPassword);
 
-    createUserWithEmailAndPassword(email, password);
+    await createUserWithEmailAndPassword(email, password);
 
-    updateProfile({ displayName });
+    await updateProfile({ displayName });
   };
 
   return (
