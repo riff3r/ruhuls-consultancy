@@ -1,4 +1,4 @@
-# HomeFoodie
+# Ruhul's Consultancy
 
 ## [Private repo link -](https://github.com/programming-hero-web-course-4/independent-service-provider-riff3r) [https://github.com/programming-hero-web-course-4/independent-service-provider-riff3r](https://github.com/programming-hero-web-course-4/independent-service-provider-riff3r)
 
