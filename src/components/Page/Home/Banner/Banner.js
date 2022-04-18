@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Button from "../../../UI/Button/Button";
 import "./Banner.css";
 
@@ -21,7 +22,12 @@ const Banner = () => {
               to your requirement.
             </p>
 
-            <Button>Discover More</Button>
+            <a
+              className="text-white inline-block px-5 py-3 font-semibold bg-orange-600 hover:bg-orange-700"
+              href="#services"
+            >
+              Discover More
+            </a>
           </div>
         </div>
       </div>

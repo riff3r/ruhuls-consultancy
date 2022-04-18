@@ -1,6 +1,6 @@
 import React from "react";
 import HeaderCenter from "../../UI/HeaderCenter/HeaderCenter";
-import Services from "../Services/Services";
+import Services from "../../Layout/Services/Services";
 import Banner from "./Banner/Banner";
 
 const Home = () => {

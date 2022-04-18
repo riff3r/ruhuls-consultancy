@@ -1,21 +1,39 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import {
   useSignInWithEmailAndPassword,
   useSignInWithGoogle,
 } from "react-firebase-hooks/auth";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import auth from "../../Firebase/Firebase.init";
 
 const Login = () => {
   const emailRef = useRef("");
   const passwordRef = useRef("");
+  let navigate = useNavigate();
+  let location = useLocation();
 
-  const [signInWithEmailAndPassword, emaolUser, emailLoading, emailError] =
+  const [signInWithEmailAndPassword, emailUser, emailLoading, emailError] =
     useSignInWithEmailAndPassword(auth);
 
   const [signInWithGoogle, googleUser, googleLoading, googleError] =
     useSignInWithGoogle(auth);
+
+  console.log(emailUser);
+  console.log(googleUser);
+
+  useEffect(() => {
+    if (emailUser) {
+      navigate(from, { replace: true });
+    }
+    if (googleUser) {
+      navigate(from, { replace: true });
+    }
+  }, [emailUser, googleUser]);
+
+  let from = location.state?.from?.pathname || "/";
+
+  console.log(from);
 
   const handleEmailLogin = (event) => {
     event.preventDefault();

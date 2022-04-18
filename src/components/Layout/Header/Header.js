@@ -3,7 +3,6 @@ import React, { Fragment } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { Link } from "react-router-dom";
 import auth from "../../Firebase/Firebase.init";
-import Button from "../../UI/Button/Button";
 
 const Header = () => {
   const [user, loading, error] = useAuthState(auth);
@@ -20,7 +19,7 @@ const Header = () => {
 
           <nav className="font-medium flex flex-col md:flex-row lg:flex-row items-center gap-7">
             <Link to="/">Home</Link>
-            <Link to="/service">Service</Link>
+            <Link to="/services">Services</Link>
             <Link to="/blog">Blog</Link>
             <Link to="/about">About</Link>
             {!user?.uid ? (
