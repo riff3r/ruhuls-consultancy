@@ -6,18 +6,20 @@ const Service = ({ service }) => {
   const { id, title, description, image, price } = service || {};
   return (
     <div className="shadow-lg overflow-hidden  ">
-      <img
-        className="transition-all duration-500 delay-100 hover:scale-110"
-        src={image}
-        alt={title}
-      />
+      <div className="text-center"></div>
 
       <div className="text-center p-5">
+        <img
+          className="my-5 inline-block transition-all duration-500 delay-100 hover:scale-110"
+          src={image}
+          alt={title}
+        />
+
         <h3 className="text-sky-900 text-2xl font-semibold mb-5">{title}</h3>
 
         <p className="mb-5">{description}</p>
 
-        <h4 className="font-semibold text-xl mb-5">Each Platter: ${price}</h4>
+        <h4 className="font-semibold text-xl mb-5">Starts From: {price}</h4>
 
         <Link
           to={`/service/${id}`}

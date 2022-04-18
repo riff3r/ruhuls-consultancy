@@ -14,7 +14,7 @@ const Header = () => {
         <div className="md:flex md:flex-row lg:flex-row justify-between items-center px-5 md:px-0 transition-all duration-500 delay-500 ease-in ">
           <div className="flex justify-between items-center">
             <Link to="/" className="font-Satisfy text-3xl">
-              <span className="text-orange-600">H</span>omeFoodie
+              <span className="text-orange-600">Ruhul's</span> Consultancy
             </Link>
 
             {navbarOpen ? (
@@ -55,7 +55,7 @@ const Header = () => {
           </div>
 
           <nav
-            className={`py-5 font-medium flex flex-col items-start md:flex-row lg:flex-row md:items-center gap-7 ${
+            className={`py-5 font-medium flex flex-col items-start md:flex-row lg:flex-row md:items-center gap-7  ${
               !navbarOpen && "hidden md:flex"
             }`}
           >

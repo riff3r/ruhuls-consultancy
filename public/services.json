@@ -1,23 +1,23 @@
 [
   {
     "id": 101,
-    "title": "Corporate Events",
-    "description": "Planning an important business meeting with your partners? Impress them with lunch with Home Made Food",
-    "image": "https://i.ibb.co/G0fTWpF/burg.jpg",
-    "price": 99
+    "title": "Worker Visa",
+    "description": "Worker visa has a lot of demand now a days. With right information and document i can process worker visa as soon as possible ",
+    "image": "https://i.ibb.co/wdxrqq0/service-1.png",
+    "price": 8000
   },
   {
     "id": 102,
-    "title": "Wedding Reception",
-    "description": "Celebrate your special event in beautiful atmosphere of HomeFoodie. You can select from couple of pre-made menus",
-    "image": "https://i.ibb.co/5RJdLNW/pizza.jpg",
-    "price": 66
+    "title": "Business Visa",
+    "description": "Are you interested to setup a business abroad? I'll provide you the best service you can imagine. Contact with me as soon as possible",
+    "image": "https://i.ibb.co/QQw1cDY/service-2.png",
+    "price": 10000
   },
   {
     "id": 103,
-    "title": "Social Event",
-    "description": "Weather you are celebrating your birthday, have a family reunion or something else, we'll make it enjoying and memorable.",
-    "image": "https://i.ibb.co/Qb3GTcY/sub.jpg",
-    "price": 49
+    "title": "Student Visa",
+    "description": "For better education you must need a better university and student visa. I can help you with everything you need",
+    "image": "https://i.ibb.co/TTBkWf7/service-3.png",
+    "price": 5000
   }
 ]

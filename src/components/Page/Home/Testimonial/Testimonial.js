@@ -4,10 +4,7 @@ import HeaderCenter from "../../../UI/HeaderCenter/HeaderCenter";
 const Testimonial = () => {
   return (
     <div className="mt-10">
-      <HeaderCenter
-        title="Testimonial"
-        subtitle="What They Say About Homefoodie"
-      />
+      <HeaderCenter title="Testimonial" subtitle="What They Say About Me" />
 
       <div className="container mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-20">
@@ -24,9 +21,11 @@ const Testimonial = () => {
 
             <div class="h-3 text-3xl text-left text-gray-600">“</div>
             <p class="px-4 text-sm text-center text-gray-600">
-              You can select from couple of pre-made menus for every occasion
-              that should please many different palates or work with us to
-              create your own menu.
+              I highly recommend. Best service . My brother's study visa got
+              rejected and no other consultant was ready to reapply the file as
+              everyone was scared because of the refusal and just kept on giving
+              excuses, but consultants at visa sure took it with grace and got
+              the visa approved just in 4 days.
             </p>
             <div class="h-3 text-3xl text-right text-gray-600">”</div>
           </div>
@@ -44,10 +43,10 @@ const Testimonial = () => {
 
             <div class="h-3 text-3xl text-left text-gray-600">“</div>
             <p class="px-4 text-sm text-center text-gray-600">
-              Planning an important business meeting with your partners? Impress
-              them with lunch in Royal Plate. Royal Plate covers everything from
-              business lunches, to custom team building programs and corporate
-              parties.
+              Very thorough and organised. Gave detailed information and
+              executed the file in a professional manner. I have had two visas
+              from Croyez Immigration and both were granted without any hassle.
+              Keep up the good work
             </p>
             <div class="h-3 text-3xl text-right text-gray-600">”</div>
           </div>
@@ -65,9 +64,11 @@ const Testimonial = () => {
 
             <div class="h-3 text-3xl text-left text-gray-600">“</div>
             <p class="px-4 text-sm text-center text-gray-600">
-              Weather you are celebrating your birthday, have a family reunion
-              or something else, we'll make it enjoying and memorable. Our
-              experts have years of experience in party planning
+              I really appreciate the team of Croyez is highly recommendable and
+              very professional about the Canada PR. Even though I started my PR
+              Process at this pandemic situation they assisted me perfectly for
+              the initial level of documentations. Very responsive and quality
+              for money. So finally i have found good immigration consultants.
             </p>
             <div class="h-3 text-3xl text-right text-gray-600">”</div>
           </div>

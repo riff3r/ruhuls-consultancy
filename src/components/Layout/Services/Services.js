@@ -10,8 +10,8 @@ const Services = () => {
   return (
     <Fragment>
       <HeaderCenter
-        title="Our Services"
-        subtitle="The catering with the royal touch"
+        title="My Services"
+        subtitle="I'm an Experts To Generate Great Visa"
       />
 
       <section id="services" className="">

@@ -9,11 +9,11 @@ const Footer = () => {
           <div>
             {" "}
             <Link to="/" className="font-Satisfy text-3xl  inline-block mb-5">
-              <span className="text-orange-600">H</span>omeFoodie
+              <span className="text-orange-600">Ruhul's </span> Consultancy
             </Link>
             <div>
               <p>Address: 22, Banani, Dhaka, Bangladesh</p>
-              <p>Open everyday</p>
+              <p>Available everyday</p>
               <p>Contact: 3659874521</p>
             </div>
           </div>

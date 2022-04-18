@@ -10,16 +10,14 @@ const Banner = () => {
         <div className="container mx-auto text-white">
           <div className="py-10 md:py-52  px-5 md:px-0">
             <h3 className="text-4xl text-orange-600 mb-10">
-              Welcome to Homefoodie
+              TRAVISA TRAVELS IMMIGRATION & VISA Consultant
             </h3>
             <h2 className="text-7xl font-Satisfy mb-5">
-              Where taste meets <br /> excellence service.
+              Immigration & Visa <br /> Consultant Worldwide
             </h2>
 
             <p className="mb-5">
-              Best home made food in the town. Get your desired food according
-              <br />
-              to your requirement.
+              I Provide Solution To All Migration & Visa Matters
             </p>
 
             <a
