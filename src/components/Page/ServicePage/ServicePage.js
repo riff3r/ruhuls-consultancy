@@ -5,10 +5,6 @@ import HeaderCenter from "../../UI/HeaderCenter/HeaderCenter";
 const ServicePage = () => {
   return (
     <Fragment>
-      <HeaderCenter
-        title="Our Services"
-        subtitle="The catering with the royal touch"
-      />
       <Services />
     </Fragment>
   );

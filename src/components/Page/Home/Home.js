@@ -2,16 +2,14 @@ import React from "react";
 import HeaderCenter from "../../UI/HeaderCenter/HeaderCenter";
 import Services from "../../Layout/Services/Services";
 import Banner from "./Banner/Banner";
+import Testimonial from "./Testimonial/Testimonial";
 
 const Home = () => {
   return (
     <div>
       <Banner />
-      <HeaderCenter
-        title="Our Services"
-        subtitle="The catering with the royal touch"
-      />
       <Services />
+      <Testimonial />
     </div>
   );
 };

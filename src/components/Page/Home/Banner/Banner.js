@@ -10,7 +10,7 @@ const Banner = () => {
         <div className="container mx-auto text-white">
           <div className="py-10 md:py-52  px-5 md:px-0">
             <h3 className="text-4xl text-orange-600 mb-10">
-              Welcome to Deliciouso
+              Welcome to Homefoodie
             </h3>
             <h2 className="text-7xl font-Satisfy mb-5">
               Where taste meets <br /> excellence service.
