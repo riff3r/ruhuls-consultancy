@@ -8,7 +8,7 @@ const Banner = () => {
     <section className="mb-5">
       <div className="banner flex items-center">
         <div className="container mx-auto text-white">
-          <div className="py-52">
+          <div className="py-10 md:py-52  px-5 md:px-0">
             <h3 className="text-4xl text-orange-600 mb-10">
               Welcome to Deliciouso
             </h3>
