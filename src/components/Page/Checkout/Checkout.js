@@ -5,7 +5,7 @@ const Checkout = () => {
   const handleCheckOut = (event) => {
     event.preventDefault();
 
-    toast("Your order placed");
+    toast("Thank you for the booking.");
   };
 
   return (
@@ -23,7 +23,13 @@ const Checkout = () => {
                 placeholder="Full Name"
                 required
               />
-
+              <input
+                type="email"
+                className="block border border-grey-light w-full p-3 rounded mb-4"
+                name="Email"
+                placeholder="Your Email"
+                required
+              />
               <input
                 type="number"
                 className="block border border-grey-light w-full p-3 rounded mb-4"
