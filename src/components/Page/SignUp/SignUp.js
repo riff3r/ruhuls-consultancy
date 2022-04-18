@@ -51,14 +51,16 @@ const SignUp = () => {
               className="block border border-grey-light w-full p-3 rounded mb-4"
               name="fullname"
               placeholder="Full Name"
+              required
             />
 
             <input
               ref={emailRef}
-              type="text"
+              type="email"
               className="block border border-grey-light w-full p-3 rounded mb-4"
               name="email"
               placeholder="Email"
+              required
             />
 
             <input
@@ -67,6 +69,7 @@ const SignUp = () => {
               className="block border border-grey-light w-full p-3 rounded mb-4"
               name="password"
               placeholder="Password"
+              required
             />
             <input
               ref={confirmPasswordRef}
