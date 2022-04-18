@@ -1,10 +1,12 @@
 import React, { useEffect, useRef } from "react";
 import {
+  useSendPasswordResetEmail,
   useSignInWithEmailAndPassword,
   useSignInWithGoogle,
+  useUpdatePassword,
 } from "react-firebase-hooks/auth";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { ToastContainer } from "react-toastify";
+import { toast, ToastContainer } from "react-toastify";
 import auth from "../../Firebase/Firebase.init";
 
 const Login = () => {
@@ -19,8 +21,11 @@ const Login = () => {
   const [signInWithGoogle, googleUser, googleLoading, googleError] =
     useSignInWithGoogle(auth);
 
+  const [sendPasswordResetEmail, sending, resetError] =
+    useSendPasswordResetEmail(auth);
+
   console.log(emailUser);
-  console.log(googleUser);
+  console.log(resetError?.message);
 
   useEffect(() => {
     if (emailUser) {
@@ -29,7 +34,10 @@ const Login = () => {
     if (googleUser) {
       navigate(from, { replace: true });
     }
-  }, [emailUser, googleUser]);
+    if (resetError) {
+      toast(resetError?.message);
+    }
+  }, [emailUser, googleUser, resetError]);
 
   let from = location.state?.from?.pathname || "/";
 
@@ -45,6 +53,22 @@ const Login = () => {
 
   const handleGoogleLogin = () => {
     signInWithGoogle();
+  };
+
+  const handleForgetPassword = async (event) => {
+    event.preventDefault();
+    const email = emailRef.current.value;
+
+    console.log(email);
+
+    if (!email) {
+      toast("Please enter your Email");
+      return;
+    }
+
+    await sendPasswordResetEmail(email);
+
+    toast("Please check your email to reset password");
   };
 
   return (
@@ -94,6 +118,16 @@ const Login = () => {
 
               <span>Login With Google</span>
             </button>
+
+            <div className="text-grey-dark mt-6">
+              <button
+                onClick={handleForgetPassword}
+                className="border-b border-blue text-orange-600"
+                to="/signup"
+              >
+                Forgot Password?
+              </button>
+            </div>
 
             <div className="text-grey-dark mt-6">
               Already have an account?{" "}
